@@ -48,7 +48,7 @@ const year = (new Date()).getFullYear()
     </nav>
   </header>
   <RouterView/>
-  <footer class="text-center text-lg-start text-muted" style="background:rgba(0, 0, 0, 0.05);">
+  <footer class="text-center text-lg-start text-muted mt-auto">
     <section class="">
       <div class="d-flex justify-content-center border-top text-lg-start">
         <div class="row mt-4">
@@ -217,7 +217,8 @@ nav a:hover {
   }
 }
 
-RouterView{
-  min-height: 1000px;
+footer {
+  background: rgba(0, 0, 0, 0.05);
 }
+
 </style>
