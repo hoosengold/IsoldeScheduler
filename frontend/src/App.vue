@@ -12,7 +12,7 @@ const year = (new Date()).getFullYear()
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: var(--color-background-mute)">
       <div class="container-fluid">
         <RouterLink to="/" class="navbar-brand">
-          <img alt="FDIBA logo" class="logo" src="src/assets/fdiba-logo-white.png"
+          <img alt="FDIBA logo" class="logo" src="../src/assets/fdiba-logo-white.png"
                width="125" height="43"/></RouterLink>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,14 +69,14 @@ const year = (new Date()).getFullYear()
                  target="_blank">
                 <img width="16"
                      alt="Tu-sofia-logo"
-                     src="src/assets/Tu-sofia-logo.svg">
+                     src="../src/assets/Tu-sofia-logo.svg">
               </a>
               <a :href="fdiba_url"
                  target="_blank"
                  class="me-4 text-reset">
                 <img width="16"
                      alt="fdiba-logo-black"
-                     src="src/assets/fdiba-logo-black.png">
+                     src="../src/assets/fdiba-logo-black.png">
               </a>
             </div>
           </div>
@@ -215,5 +215,9 @@ nav a:hover {
     text-align: left;
     font-size: 1rem;
   }
+}
+
+RouterView{
+  min-height: 1000px;
 }
 </style>
