@@ -4,6 +4,9 @@ import {RouterLink, RouterView} from 'vue-router'
 const source = import.meta.env.VITE_SOURCE_CODE
 const uni = import.meta.env.VITE_UNI
 const fdiba_url = import.meta.env.VITE_FDIBA
+const fdiba_facebook = import.meta.env.VITE_FDIBA_FACEBOOK
+const fdiba_instagram = import.meta.env.VITE_FDIBA_INSTAGRAM
+const fdiba_linkedin = import.meta.env.VITE_FDIBA_LINKEDIN
 const year = (new Date()).getFullYear()
 </script>
 
@@ -40,7 +43,9 @@ const year = (new Date()).getFullYear()
               </RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/about" class="nav-link">About</RouterLink>
+              <RouterLink to="/about" class="nav-link">
+                About
+              </RouterLink>
             </li>
           </ul>
         </div>
@@ -49,21 +54,24 @@ const year = (new Date()).getFullYear()
   </header>
   <RouterView/>
   <footer class="text-center text-lg-start text-muted mt-auto">
-    <section class="">
-      <div class="d-flex justify-content-center border-top text-lg-start">
-        <div class="row mt-4">
-          <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+    <section class="w-100">
+      <div class="d-flex flex-nowrap justify-content-center border-top text-lg-start">
+        <div class="row d-flex flex-nowrap mt-4" style="width: 85%">
+          <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4 text-center">
             <h6 class="text-uppercase fw-bold mb-4">
               <i class=""></i>Get connected with us on social networks:
             </h6>
             <div>
-              <a href="" class="me-4 text-reset">
-                <i class="bi bi-facebook"></i>
+              <a :href="fdiba_facebook" class="me-4 text-reset">
+                <i class="bi bi-facebook" style="color: var(--vt-c-black-mute)"></i>
               </a>
-              <a :href="source" target="_blank" class="me-4 text-reset">
-                <i class="bi bi-github"></i>
+              <a :href="fdiba_instagram" class="me-4 text-reset">
+                <i class="bi bi-instagram" style="color: var(--vt-c-black-mute)"></i>
               </a>
-              <a class="me-4 text-reset"
+              <a :href="fdiba_linkedin" class="me-4 text-reset">
+                <i class="bi bi-linkedin" style="color: var(--vt-c-black-mute)"></i>
+              </a>
+              <a class="me-4 text-reset align-items-center"
                  title="en:User:Cameltrader, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons"
                  :href="uni"
                  target="_blank">
@@ -73,14 +81,17 @@ const year = (new Date()).getFullYear()
               </a>
               <a :href="fdiba_url"
                  target="_blank"
-                 class="me-4 text-reset">
+                 class="me-4 text-reset align-items-center">
                 <img width="16"
                      alt="fdiba-logo-black"
                      src="../src/assets/fdiba-logo-black.png">
               </a>
+              <a :href="source" target="_blank" class="me-4 text-reset">
+                <i class="bi bi-github" style="color: var(--vt-c-black-mute)"></i>
+              </a>
             </div>
           </div>
-          <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+          <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4 ms-4 me-4 text-center">
             <h6 class="text-uppercase fw-bold mb-4">
               Useful links
             </h6>
@@ -97,29 +108,32 @@ const year = (new Date()).getFullYear()
               <a href="#!" class="text-reset">Link 4</a>
             </p>
           </div>
-          <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
+          <div class="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4 text-start">
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="bi bi-house-fill me-3"></i>New York, NY 10012, US</p>
+            <p><i class="bi bi-house-fill me-3"></i>TU Sofia, FDIBA<br>
+              blvd. St. Kliment Ohridski 8<br>
+              Block 10, 2. Floor<br>
+              Sofia 1756
+            </p>
             <p>
               <i class="bi bi-envelope-at-fill me-3"></i>
-              <a href="mailto:info@example.com">info@example.com</a>
+              <a href="mailto:contact@fdiba.tu-sofia.bg">contact@fdiba.tu-sofia.bg</a>
             </p>
             <p>
               <i class="bi bi-phone-fill me-3"></i>
-              <a href="tel:+ 01 234 567 88">+ 01 234 567 88</a>
+              <a href="tel:">EMPTY</a>
             </p>
             <p>
               <i class="bi bi-telephone-fill me-3"></i>
-              <a href="tel:+ 01 234 567 89">+ 01 234 567 89</a>
+              <a href="tel:+359 2 965 3213">+359 2 965 3213</a>
             </p>
           </div>
         </div>
       </div>
     </section>
-    <div class="text-center p-4" id="copyright">
+    <div class="text-center p-3 lh-base" id="copyright">
       © <a v-text="year"></a> Copyright:
-      <a class="text-reset fw-bold" href="https://github.com/hoosengold" target="_blank"> hoosengold</a>
-      <br>
+      <a class="text-reset fw-bold pb-1" href="https://github.com/hoosengold" target="_blank"> hoosengold</a>
       <br>
       <a>This page is licensed under the <a
         href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text"
