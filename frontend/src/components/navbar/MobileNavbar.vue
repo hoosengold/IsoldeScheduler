@@ -2,7 +2,7 @@
 import {RouterLink} from 'vue-router'
 
 function scrollToTop() {
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 }
 </script>
 
@@ -26,33 +26,103 @@ function scrollToTop() {
               Courses
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#" id="dropdown-inf">INF &#9658;</a>
-                <ul class="dropdown-menu dropdown-submenu">
-                  <li><a class="dropdown-item" href="#">Something else here2</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here2</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here2</a>
-                    <ul class="dropdown-menu dropdown-submenu">
-                      <li>
-                        <a class="dropdown-item" href="#">Multi level 1</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Multi level 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+              <div class="accordion open" id="accordionNavbar">
+                <div class="accordion-item">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseInf" aria-expanded="false" aria-controls="collapseInf">
+                    INF
+                  </button>
+                  <div id="collapseInf" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                       data-bs-parent="#accordionNavbar">
+                    <div class="accordion-body d-grid">
+                      <a href="#!" class="link-dark p-2">2018</a>
+                      <a href="#!" class="link-dark p-2">2019</a>
+                      <a href="#!" class="link-dark p-2">2020</a>
+                      <a href="#!" class="link-dark p-2">2021</a>
+                      <a href="#!" class="link-dark p-2">2022</a>
+                      <a href="#!" class="link-dark p-2">2023</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseWinf" aria-expanded="false" aria-controls="collapseWinf">
+                    WINF
+                  </button>
+                  <div id="collapseWinf" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                       data-bs-parent="#accordionNavbar">
+                    <div class="accordion-body">
+                      <a href="#!" class="link-dark pb-2">2018</a>
+                      <a href="#!" class="link-dark">2019</a>
+                      <a href="#!" class="link-dark">2020</a>
+                      <a href="#!" class="link-dark">2021</a>
+                      <a href="#!" class="link-dark">2022</a>
+                      <a href="#!" class="link-dark">2023</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseMit" aria-expanded="false" aria-controls="collapseMit">
+                    MIT
+                  </button>
+                  <div id="collapseMit" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                       data-bs-parent="#accordionNavbar">
+                    <div class="accordion-body">
+                      <a href="#!" class="link-dark">2018</a>
+                      <a href="#!" class="link-dark">2019</a>
+                      <a href="#!" class="link-dark">2020</a>
+                      <a href="#!" class="link-dark">2021</a>
+                      <a href="#!" class="link-dark">2022</a>
+                      <a href="#!" class="link-dark">2023</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <li><a class="dropdown-item btn btn-primary" href="#collapseInfMsc" id="dropdown-inf"
+                     data-bs-toggle="collapse" role="button" aria-expanded="false"
+                     aria-controls="collapseInfMsc">INF (M.Sc.) &#9658;</a>
               </li>
-              <li><a class="dropdown-item" href="#" id="dropdown-winf">WINF &#9658;</a>
+              <div class="collapse bg-transparent border-0" id="collapseInfMsc">
+                <div class="card card-body">
+                  <a href="#!" class="link-dark pb-2">2018</a>
+                  <a href="#!" class="link-dark pb-2">2019</a>
+                  <a href="#!" class="link-dark pb-2">2020</a>
+                  <a href="#!" class="link-dark pb-2">2021</a>
+                  <a href="#!" class="link-dark pb-2">2022</a>
+                  <a href="#!" class="link-dark pb-2">2023</a>
+                </div>
+              </div>
+              <li><a class="dropdown-item btn btn-primary" href="#collapseWinfMsc" id="dropdown-inf"
+                     data-bs-toggle="collapse" role="button" aria-expanded="false"
+                     aria-controls="collapseWinfMsc">WINF (M.Sc.) &#9658;</a>
               </li>
-              <li><a class="dropdown-item" href="#" id="dropdown-mit">MIT &#9658;</a>
+              <div class="collapse bg-transparent border-0" id="collapseWinfMsc">
+                <div class="card card-body">
+                  <a href="#!" class="link-dark">2018</a>
+                  <a href="#!" class="link-dark">2019</a>
+                  <a href="#!" class="link-dark">2020</a>
+                  <a href="#!" class="link-dark">2021</a>
+                  <a href="#!" class="link-dark">2022</a>
+                  <a href="#!" class="link-dark">2023</a>
+                </div>
+              </div>
+              <li><a class="dropdown-item btn btn-primary" href="#collapseIm" id="dropdown-inf"
+                     data-bs-toggle="collapse" role="button" aria-expanded="false"
+                     aria-controls="collapseIm">IM (M.Sc.) &#9658;</a>
               </li>
-              <li><a class="dropdown-item" href="#" id="dropdown-inf-msc">INF (M.Sc.) &#9658;</a>
-              </li>
-              <li><a class="dropdown-item" href="#" id="dropdown-winf-msc">WINF (M.Sc.) &#9658;</a>
-              </li>
-              <li><a class="dropdown-item" href="#" id="dropdown-im-msc">IM (M.Sc.) &#9658;</a>
-              </li>
+              <div class="collapse bg-transparent border-0" id="collapseIm">
+                <div class="card card-body">
+                  <a href="#!" class="link-dark">2018</a>
+                  <a href="#!" class="link-dark">2019</a>
+                  <a href="#!" class="link-dark">2020</a>
+                  <a href="#!" class="link-dark">2021</a>
+                  <a href="#!" class="link-dark">2022</a>
+                  <a href="#!" class="link-dark">2023</a>
+                </div>
+              </div>
             </ul>
+
           </li>
           <li class="nav-item">
             <RouterLink to="/login" class="nav-link" @click="scrollToTop">
@@ -78,8 +148,8 @@ a.container-fluid img {
 
 nav {
   width: 100%;
-  text-align: center;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 nav a.router-link-exact-active {
@@ -93,13 +163,9 @@ nav a.router-link-exact-active:hover {
 
 nav a {
   display: inline-block;
-  border-left: 1px solid var(--color-border);
+  border: none;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-nav a:first-of-type {
-  border: 0;
 }
 
 nav a:hover {
@@ -119,8 +185,9 @@ nav a:hover {
 .dropdown-item:hover {
   text-decoration-line: underline;
   color: var(--vt-c-black-mute);
-  margin-left: 10px;
+  /*margin-left: 10px;*/
   max-width: 0.8em;
+  background: transparent;
 }
 
 .dropdown-item:active {
@@ -143,10 +210,15 @@ nav a:hover {
   position: relative;
 }
 
-.dropdown-menu .dropdown-submenu {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: -7px;
+.accordion > .accordion-item :hover{
+  background-color: white;
+  box-shadow: none;
+}
+
+@media (min-width: 1024px) {
+  nav {
+    text-align: left;
+    font-size: 1rem;
+  }
 }
 </style>
